@@ -15,7 +15,7 @@ data/kancolle-maps/
 
 1. 读 `index.json` 得到 map_id → `source_url` / `html` / `meta` / `skill_md`
 2. 需要带路/敌配细节 → `meta/<id>.json` 或 `html/<id>.html`
-3. 需要精简可读版 → `.opencode/skills/fleet-builder/refs/maps/<id>.md`
+3. 需要精简可读版 → `.agents/skills/fleet-builder/refs/maps/<id>.md`
 4. 出击任务推荐 → `fleet-builder/refs/quest-sortie-configs.md`
 
 ## 来源

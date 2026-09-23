@@ -6,7 +6,7 @@ import { join, relative } from "node:path";
 
 const root = join(process.cwd(), "data", "kancolle-maps");
 const metaDir = join(root, "meta");
-const mapsMd = join(process.cwd(), ".opencode/skills/fleet-builder/refs/maps");
+const mapsMd = join(process.cwd(), ".agents/skills/fleet-builder/refs/maps");
 
 const ids = readdirSync(metaDir)
   .filter((f) => f.endsWith(".json"))
@@ -39,7 +39,7 @@ const items = ids.map((id) => {
       meta: `data/kancolle-maps/meta/${id}.json`,
       html: existsSync(htmlPath) ? `data/kancolle-maps/html/${id}.html` : null,
       raw: existsSync(join(root, "raw", `${id}.txt`)) ? `data/kancolle-maps/raw/${id}.txt` : null,
-      skill_md: existsSync(mdPath) ? `.opencode/skills/fleet-builder/refs/maps/${id}.md` : null,
+      skill_md: existsSync(mdPath) ? `.agents/skills/fleet-builder/refs/maps/${id}.md` : null,
     },
   };
 });

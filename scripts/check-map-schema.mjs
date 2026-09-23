@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-const dir = join(process.cwd(), ".opencode/skills/fleet-builder/refs/maps");
+const dir = join(process.cwd(), ".agents/skills/fleet-builder/refs/maps");
 const need = ["overview", "routing", "enemy", "air-los", "fleets", "quests", "notes"];
 const files = readdirSync(dir)
   .filter((f) => /^[1-7]-[1-6]\.md$/.test(f))

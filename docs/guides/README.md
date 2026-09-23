@@ -16,12 +16,12 @@
 |------|------|
 | `docs/guides/INDEX.md` | 总索引（网址 + 已落盘文档） |
 | `docs/guides/index.html` | 本地浏览器总览（可选） |
-| `.opencode/skills/<id>/refs/*.md` | 各 Skill 附属查阅页 |
-| `.opencode/skills/<id>/refs/SOURCES.md` | 该 Skill 的网址清单 |
+| `.agents/skills/<id>/refs/*.md` | 各 Skill 附属查阅页 |
+| `.agents/skills/<id>/refs/SOURCES.md` | 该 Skill 的网址清单 |
 
 ## 使用
 
-- OpenCode：按 Skill 按需读 `refs/`，不要每次全量加载。
+- Codex/OpenCode：按 Skill 按需读 `refs/`，不要每次全量加载。
 - 新增攻略：先加 `SOURCES.md` 链接，再写精简 MD，最后在 SKILL.md 加一行「附属文档」指针。
 
 ## 维护

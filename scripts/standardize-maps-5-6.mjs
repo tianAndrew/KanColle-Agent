@@ -11,7 +11,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const ROOT = join(import.meta.dirname, "..");
-const MAPS_DIR = join(ROOT, ".opencode/skills/fleet-builder/refs/maps");
+const MAPS_DIR = join(ROOT, ".agents/skills/fleet-builder/refs/maps");
 const META_DIR = join(ROOT, "data/kancolle-maps/meta");
 const IDS = ["5-1","5-2","5-3","5-4","5-5","5-6","6-1","6-2","6-3","6-4","6-5"];
 

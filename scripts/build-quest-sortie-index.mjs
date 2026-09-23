@@ -6,11 +6,11 @@ import { join } from "node:path";
 
 const mapsDir = join(
   process.cwd(),
-  ".opencode/skills/fleet-builder/refs/maps",
+  ".agents/skills/fleet-builder/refs/maps",
 );
 const out = join(
   process.cwd(),
-  ".opencode/skills/fleet-builder/refs/quest-sortie-configs.md",
+  ".agents/skills/fleet-builder/refs/quest-sortie-configs.md",
 );
 
 const files = readdirSync(mapsDir)

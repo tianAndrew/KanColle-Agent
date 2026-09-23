@@ -7,7 +7,7 @@ import { join } from "node:path";
 
 const dir = join(
   process.cwd(),
-  ".opencode",
+  ".agents",
   "skills",
   "fleet-builder",
   "refs",

@@ -12,7 +12,7 @@ const port = Number(process.env.CDP_PORT || 9333);
 const tid = "23451223";
 const outDir = join(
   process.cwd(),
-  ".opencode/skills/fleet-builder/refs/maps",
+  ".agents/skills/fleet-builder/refs/maps",
   "_routing",
 );
 mkdirSync(outDir, { recursive: true });

@@ -28,7 +28,7 @@ slimmed: true
 | `## [module:quests] 任务配置` | 是 | 出击任务推荐 |
 | `## [module:notes] 备注` | 是 | 数据时代与核实边界 |
 
-机器身份只使用 `[module:<key>]`；模块顺序、完整规则及校验脚本见 `.opencode/skills/fleet-builder/refs/maps/FORMAT.md`。
+机器身份只使用 `[module:<key>]`；模块顺序、完整规则及校验脚本见 `.agents/skills/fleet-builder/refs/maps/FORMAT.md`。
 
 ## 敌方配置压缩格式
 

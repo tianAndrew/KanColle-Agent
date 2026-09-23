@@ -1,6 +1,7 @@
 /**
  * setup-opencode.ts — write/refresh OpenCode-facing pointers.
- * Agents and skills already live in .opencode/. This script validates them
+ * OpenCode agents live in .opencode/; shared skills live in .agents/skills/.
+ * This script validates them
  * and prints the token / env vars the user must set.
  */
 import { existsSync, readFileSync } from "node:fs";
@@ -27,7 +28,7 @@ for (const a of agents) {
   } else console.log(`OK agent: ${a}`);
 }
 for (const s of skills) {
-  const p = join(root, ".opencode/skills", s, "SKILL.md");
+  const p = join(root, ".agents/skills", s, "SKILL.md");
   if (!existsSync(p)) {
     console.error(`MISSING skill: ${s}`);
     ok = false;
@@ -47,7 +48,7 @@ Next steps:
 1. npm install && npm run build
 2. Start Poi plugin (or: npm run start -w poi-plugin-kancolle-mcp for mock)
 3. Set env KANCOLLE_POI_MCP_TOKEN from packages/poi-plugin-mcp/token.json
-4. Open this folder in OpenCode — agents/skills/MCP auto-discovered via opencode.jsonc
+4. Open this folder in OpenCode — agents, shared skills, and MCP are discovered from the project config
 `);
 
 if (!ok) process.exit(1);

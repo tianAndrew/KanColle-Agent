@@ -20,7 +20,8 @@ Main Agent           = 根据这个玩家的情况，现在应该怎么做
 | `@kancolle-agent/shared` | 共享 Ref / Result / Types |
 | `@kancolle-agent/data-mcp` | 静态数据 MCP（stdio） |
 | `poi-plugin-kancolle-mcp` | Poi 插件 + 玩家数据 MCP（localhost HTTP） |
-| `.opencode/` | Main Agent / kcwiki-researcher / Skills |
+| `AGENTS.md` + `.agents/skills/` | 跨客户端工作区规则与可复用 Skills |
+| `.opencode/` | OpenCode 专用 Agent 和 MCP 配置 |
 
 ## 快速开始
 
@@ -37,7 +38,11 @@ npm run verify
 npm run setup
 ```
 
-会把 agents / skills / Data MCP 配置写入本仓库的 `.opencode/` 与 `opencode.jsonc`。
+会检查 OpenCode Agent、共享 Skills 和 MCP 配置文件是否齐备，并打印启动提示。
+
+## 在 Codex Desktop 中使用
+
+在 Codex Desktop 打开本仓库即可开发。根目录 `AGENTS.md` 提供通用规则，Skills 位于 `.agents/skills/`，Codex 可按需发现。MCP 首次配置见 [部署文档](./docs/DEPLOYMENT.md)；Poi MCP 需要 Poi 正在运行并已登录。
 
 ## Poi 插件
 
@@ -54,6 +59,15 @@ npm run setup
 - 没有加载 ≠ 数量 0
 - 找不到 ≠ 系统错误
 - 数据不足 ≠ 可以推测
+
+## 质量检查
+
+```bash
+npm run verify
+npm run check:tool-docs
+```
+
+GitHub Actions 在 Linux/Windows 与 Node.js 20/22 上执行构建、类型检查、单测和 MCP 文档契约检查。
 
 ## 文档
 

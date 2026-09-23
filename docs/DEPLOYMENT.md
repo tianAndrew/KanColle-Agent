@@ -6,10 +6,10 @@
 Windows
 ├── Poi + poi-plugin-kancolle-mcp → http://127.0.0.1:39271/mcp
 ├── Node.js ≥ 20
-├── OpenCode
+├── Codex Desktop / OpenCode / compatible MCP client
 │   ├── Data MCP (stdio)
 │   ├── Poi MCP (HTTP + Token)
-│   └── .opencode agents/skills
+│   └── AGENTS.md + .agents/skills
 └── Browser / KanColle
 ```
 
@@ -31,12 +31,25 @@ npm run setup
 2. 读取生成的 `packages/poi-plugin-mcp/token.json`
 3. 设置环境变量 `KANCOLLE_POI_MCP_TOKEN`
 
+### Codex Desktop / CLI
+
+Codex Desktop 与 Codex CLI 共用 `~/.codex/config.toml` MCP 配置。安装好依赖后，在仓库根目录执行：
+
+```powershell
+codex mcp add kancolle-data -- npx.cmd tsx packages/kancolle-data-mcp/src/index.ts
+codex mcp add kancolle-poi --url http://127.0.0.1:39271/mcp --bearer-token-env-var KANCOLLE_POI_MCP_TOKEN
+codex mcp list
+```
+
+`KANCOLLE_POI_MCP_TOKEN` 必须与 Poi 插件 `token.json` 中的 token 一致。Poi 启动后会使用其环境快照；修改环境变量后重启 Codex Desktop。项目 Skills 位于 `.agents/skills/`，根目录 `AGENTS.md` 对 Codex 生效。
+
 ### OpenCode
 
 仓库根目录的 `opencode.jsonc` 注册：
 
 - `kancolle-data`：`npx tsx packages/kancolle-data-mcp/src/index.ts`
 - `kancolle-poi`：`http://127.0.0.1:39271/mcp` + Bearer Token
+- Skills：`.agents/skills/`（OpenCode 兼容目录）
 
 ## 配置
 
@@ -50,7 +63,7 @@ Token 不提交 Git。可用 `config/kancolle.local.json` 覆盖（已 gitignore
 git pull
 npm install
 npm run build
-# 重启 OpenCode / Data MCP；Poi 插件随 Poi 生命周期
+# 重启 Codex/OpenCode 以重新加载 MCP；Poi 插件随 Poi 生命周期
 ```
 
 Data 数据集更新：升级数据依赖或替换 `KANCOLLE_DATA_PATH` 后重启 Data MCP。V1 不做后台自动下载，保证可复现。

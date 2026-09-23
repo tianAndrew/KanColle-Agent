@@ -10,7 +10,7 @@ const tid = process.argv[2] || "23451223";
 const port = Number(process.env.CDP_PORT || 9333);
 const mapsDir = join(
   process.cwd(),
-  ".opencode",
+  ".agents",
   "skills",
   "fleet-builder",
   "refs",

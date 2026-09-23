@@ -27,8 +27,8 @@ function guideDirectories(): string[] {
   const moduleDir = dirname(fileURLToPath(import.meta.url));
   return [
     process.env.KANCOLLE_MAP_GUIDE_DIR,
-    join(process.cwd(), ".opencode", "skills", "fleet-builder", "refs", "maps"),
-    resolve(moduleDir, "../../../.opencode/skills/fleet-builder/refs/maps"),
+    join(process.cwd(), ".agents", "skills", "fleet-builder", "refs", "maps"),
+    resolve(moduleDir, "../../../.agents/skills/fleet-builder/refs/maps"),
   ].filter((value): value is string => Boolean(value));
 }
 

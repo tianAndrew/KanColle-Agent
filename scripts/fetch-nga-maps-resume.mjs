@@ -7,7 +7,7 @@ import { setTimeout as sleep } from "node:timers/promises";
 
 const tid = process.argv[2] || "23451223";
 const port = Number(process.env.CDP_PORT || 9333);
-const mapsDir = join(process.cwd(), ".opencode", "skills", "fleet-builder", "refs", "maps");
+const mapsDir = join(process.cwd(), ".agents", "skills", "fleet-builder", "refs", "maps");
 const MIN_CHARS = 1200;
 
 async function getJson(path) {

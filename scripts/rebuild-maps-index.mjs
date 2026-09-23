@@ -3,7 +3,7 @@ import { join } from "node:path";
 
 const dir = join(
   process.cwd(),
-  ".opencode/sskills/fleet-builder/refs/maps".replace("sskills", "skills"),
+  ".agents/skills/fleet-builder/refs/maps",
 );
 const files = readdirSync(dir)
   .filter((f) => /^[1-7]-[1-6]\.md$/.test(f))

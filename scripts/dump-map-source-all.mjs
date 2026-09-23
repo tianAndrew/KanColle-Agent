@@ -2,7 +2,7 @@ import { spawnSync } from "node:child_process";
 import { readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
-const mapsDir = join(process.cwd(), ".opencode/skills/fleet-builder/refs/maps");
+const mapsDir = join(process.cwd(), ".agents/skills/fleet-builder/refs/maps");
 const ids = readdirSync(mapsDir)
   .filter((f) => /^[1-7]-[1-6]\.md$/.test(f))
   .map((f) => f.replace(".md", ""))

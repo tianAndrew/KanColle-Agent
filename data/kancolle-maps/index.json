@@ -33,7 +33,7 @@
         "meta": "data/kancolle-maps/meta/1-1.json",
         "html": "data/kancolle-maps/html/1-1.html",
         "raw": "data/kancolle-maps/raw/1-1.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/1-1.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/1-1.md"
       }
     },
     {
@@ -53,7 +53,7 @@
         "meta": "data/kancolle-maps/meta/1-2.json",
         "html": "data/kancolle-maps/html/1-2.html",
         "raw": "data/kancolle-maps/raw/1-2.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/1-2.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/1-2.md"
       }
     },
     {
@@ -73,7 +73,7 @@
         "meta": "data/kancolle-maps/meta/1-3.json",
         "html": "data/kancolle-maps/html/1-3.html",
         "raw": "data/kancolle-maps/raw/1-3.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/1-3.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/1-3.md"
       }
     },
     {
@@ -93,7 +93,7 @@
         "meta": "data/kancolle-maps/meta/1-4.json",
         "html": "data/kancolle-maps/html/1-4.html",
         "raw": "data/kancolle-maps/raw/1-4.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/1-4.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/1-4.md"
       }
     },
     {
@@ -113,7 +113,7 @@
         "meta": "data/kancolle-maps/meta/1-5.json",
         "html": "data/kancolle-maps/html/1-5.html",
         "raw": "data/kancolle-maps/raw/1-5.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/1-5.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/1-5.md"
       }
     },
     {
@@ -133,7 +133,7 @@
         "meta": "data/kancolle-maps/meta/1-6.json",
         "html": "data/kancolle-maps/html/1-6.html",
         "raw": "data/kancolle-maps/raw/1-6.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/1-6.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/1-6.md"
       }
     },
     {
@@ -153,7 +153,7 @@
         "meta": "data/kancolle-maps/meta/2-1.json",
         "html": "data/kancolle-maps/html/2-1.html",
         "raw": "data/kancolle-maps/raw/2-1.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/2-1.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/2-1.md"
       }
     },
     {
@@ -173,7 +173,7 @@
         "meta": "data/kancolle-maps/meta/2-2.json",
         "html": "data/kancolle-maps/html/2-2.html",
         "raw": "data/kancolle-maps/raw/2-2.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/2-2.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/2-2.md"
       }
     },
     {
@@ -193,7 +193,7 @@
         "meta": "data/kancolle-maps/meta/2-3.json",
         "html": "data/kancolle-maps/html/2-3.html",
         "raw": "data/kancolle-maps/raw/2-3.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/2-3.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/2-3.md"
       }
     },
     {
@@ -213,7 +213,7 @@
         "meta": "data/kancolle-maps/meta/2-4.json",
         "html": "data/kancolle-maps/html/2-4.html",
         "raw": "data/kancolle-maps/raw/2-4.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/2-4.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/2-4.md"
       }
     },
     {
@@ -233,7 +233,7 @@
         "meta": "data/kancolle-maps/meta/2-5.json",
         "html": "data/kancolle-maps/html/2-5.html",
         "raw": "data/kancolle-maps/raw/2-5.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/2-5.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/2-5.md"
       }
     },
     {
@@ -253,7 +253,7 @@
         "meta": "data/kancolle-maps/meta/3-1.json",
         "html": "data/kancolle-maps/html/3-1.html",
         "raw": "data/kancolle-maps/raw/3-1.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/3-1.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/3-1.md"
       }
     },
     {
@@ -273,7 +273,7 @@
         "meta": "data/kancolle-maps/meta/3-2.json",
         "html": "data/kancolle-maps/html/3-2.html",
         "raw": "data/kancolle-maps/raw/3-2.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/3-2.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/3-2.md"
       }
     },
     {
@@ -293,7 +293,7 @@
         "meta": "data/kancolle-maps/meta/3-3.json",
         "html": "data/kancolle-maps/html/3-3.html",
         "raw": "data/kancolle-maps/raw/3-3.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/3-3.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/3-3.md"
       }
     },
     {
@@ -313,7 +313,7 @@
         "meta": "data/kancolle-maps/meta/3-4.json",
         "html": "data/kancolle-maps/html/3-4.html",
         "raw": "data/kancolle-maps/raw/3-4.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/3-4.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/3-4.md"
       }
     },
     {
@@ -333,7 +333,7 @@
         "meta": "data/kancolle-maps/meta/3-5.json",
         "html": "data/kancolle-maps/html/3-5.html",
         "raw": "data/kancolle-maps/raw/3-5.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/3-5.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/3-5.md"
       }
     },
     {
@@ -353,7 +353,7 @@
         "meta": "data/kancolle-maps/meta/4-1.json",
         "html": "data/kancolle-maps/html/4-1.html",
         "raw": "data/kancolle-maps/raw/4-1.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/4-1.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/4-1.md"
       }
     },
     {
@@ -373,7 +373,7 @@
         "meta": "data/kancolle-maps/meta/4-2.json",
         "html": "data/kancolle-maps/html/4-2.html",
         "raw": "data/kancolle-maps/raw/4-2.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/4-2.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/4-2.md"
       }
     },
     {
@@ -393,7 +393,7 @@
         "meta": "data/kancolle-maps/meta/4-3.json",
         "html": "data/kancolle-maps/html/4-3.html",
         "raw": "data/kancolle-maps/raw/4-3.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/4-3.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/4-3.md"
       }
     },
     {
@@ -413,7 +413,7 @@
         "meta": "data/kancolle-maps/meta/4-4.json",
         "html": "data/kancolle-maps/html/4-4.html",
         "raw": "data/kancolle-maps/raw/4-4.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/4-4.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/4-4.md"
       }
     },
     {
@@ -433,7 +433,7 @@
         "meta": "data/kancolle-maps/meta/4-5.json",
         "html": "data/kancolle-maps/html/4-5.html",
         "raw": "data/kancolle-maps/raw/4-5.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/4-5.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/4-5.md"
       }
     },
     {
@@ -453,7 +453,7 @@
         "meta": "data/kancolle-maps/meta/5-1.json",
         "html": "data/kancolle-maps/html/5-1.html",
         "raw": "data/kancolle-maps/raw/5-1.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/5-1.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/5-1.md"
       }
     },
     {
@@ -473,7 +473,7 @@
         "meta": "data/kancolle-maps/meta/5-2.json",
         "html": "data/kancolle-maps/html/5-2.html",
         "raw": "data/kancolle-maps/raw/5-2.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/5-2.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/5-2.md"
       }
     },
     {
@@ -493,7 +493,7 @@
         "meta": "data/kancolle-maps/meta/5-3.json",
         "html": "data/kancolle-maps/html/5-3.html",
         "raw": "data/kancolle-maps/raw/5-3.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/5-3.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/5-3.md"
       }
     },
     {
@@ -513,7 +513,7 @@
         "meta": "data/kancolle-maps/meta/5-4.json",
         "html": "data/kancolle-maps/html/5-4.html",
         "raw": "data/kancolle-maps/raw/5-4.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/5-4.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/5-4.md"
       }
     },
     {
@@ -533,7 +533,7 @@
         "meta": "data/kancolle-maps/meta/5-5.json",
         "html": "data/kancolle-maps/html/5-5.html",
         "raw": "data/kancolle-maps/raw/5-5.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/5-5.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/5-5.md"
       }
     },
     {
@@ -553,7 +553,7 @@
         "meta": "data/kancolle-maps/meta/5-6.json",
         "html": "data/kancolle-maps/html/5-6.html",
         "raw": "data/kancolle-maps/raw/5-6.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/5-6.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/5-6.md"
       }
     },
     {
@@ -573,7 +573,7 @@
         "meta": "data/kancolle-maps/meta/6-1.json",
         "html": "data/kancolle-maps/html/6-1.html",
         "raw": "data/kancolle-maps/raw/6-1.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/6-1.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/6-1.md"
       }
     },
     {
@@ -593,7 +593,7 @@
         "meta": "data/kancolle-maps/meta/6-2.json",
         "html": "data/kancolle-maps/html/6-2.html",
         "raw": "data/kancolle-maps/raw/6-2.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/6-2.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/6-2.md"
       }
     },
     {
@@ -613,7 +613,7 @@
         "meta": "data/kancolle-maps/meta/6-3.json",
         "html": "data/kancolle-maps/html/6-3.html",
         "raw": "data/kancolle-maps/raw/6-3.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/6-3.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/6-3.md"
       }
     },
     {
@@ -633,7 +633,7 @@
         "meta": "data/kancolle-maps/meta/6-4.json",
         "html": "data/kancolle-maps/html/6-4.html",
         "raw": "data/kancolle-maps/raw/6-4.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/6-4.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/6-4.md"
       }
     },
     {
@@ -653,7 +653,7 @@
         "meta": "data/kancolle-maps/meta/6-5.json",
         "html": "data/kancolle-maps/html/6-5.html",
         "raw": "data/kancolle-maps/raw/6-5.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/6-5.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/6-5.md"
       }
     },
     {
@@ -673,7 +673,7 @@
         "meta": "data/kancolle-maps/meta/7-1.json",
         "html": "data/kancolle-maps/html/7-1.html",
         "raw": "data/kancolle-maps/raw/7-1.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/7-1.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/7-1.md"
       }
     },
     {
@@ -693,7 +693,7 @@
         "meta": "data/kancolle-maps/meta/7-2.json",
         "html": "data/kancolle-maps/html/7-2.html",
         "raw": "data/kancolle-maps/raw/7-2.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/7-2.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/7-2.md"
       }
     },
     {
@@ -713,7 +713,7 @@
         "meta": "data/kancolle-maps/meta/7-3.json",
         "html": "data/kancolle-maps/html/7-3.html",
         "raw": "data/kancolle-maps/raw/7-3.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/7-3.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/7-3.md"
       }
     },
     {
@@ -733,7 +733,7 @@
         "meta": "data/kancolle-maps/meta/7-4.json",
         "html": "data/kancolle-maps/html/7-4.html",
         "raw": "data/kancolle-maps/raw/7-4.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/7-4.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/7-4.md"
       }
     },
     {
@@ -753,7 +753,7 @@
         "meta": "data/kancolle-maps/meta/7-5.json",
         "html": "data/kancolle-maps/html/7-5.html",
         "raw": "data/kancolle-maps/raw/7-5.txt",
-        "skill_md": ".opencode/skills/fleet-builder/refs/maps/7-5.md"
+        "skill_md": ".agents/skills/fleet-builder/refs/maps/7-5.md"
       }
     }
   ]
