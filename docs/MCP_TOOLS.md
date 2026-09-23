@@ -1,6 +1,6 @@
 # MCP Tools 参考
 
-共 **18** tools：Poi 9 + Data 9。保留细粒度查询用于兼容与补查，常规配队优先使用组合查询和攻略切片工具。
+共 **20** tools：Poi 9 + Data 11。保留细粒度查询用于兼容与补查，常规配队优先使用组合查询和攻略切片工具。工具清单由 `npm run check:tool-docs` 校验。
 
 ## Poi MCP
 
@@ -56,6 +56,10 @@
 `quest` `direction?` `depth?`
 返回 nodes + edges（仅 ID/名称/关系）。
 
+### kc_quest_progress
+`quest` `player_states?{available,active,claimable,observed_completed}`
+把目标任务前置链标注为玩家可见状态；当前可见任务的祖先可推断完成，缺失任务保持 unknown。推断不是游戏记录，也不会写回 Poi。
+
 ### kc_ship_remodel
 `ship` `scope?`（默认 `next`，可选 `family`）
 返回 `chain`（相关形态列表，不表示执行顺序）、`transitions`（有向改造及消耗）、`coverage`。
@@ -74,6 +78,11 @@
 ### kc_air_power
 
 输入具体装备（名称或 `equipment:N`）、搭载数、改修与显示熟练度，返回逐格及总制空值。未提供内部熟练度时返回该显示等级对应的范围；可传 `target_air_power` 得到三态 `meets_target`。当前只计算出击前本队制空，不包含航路损耗、基地航空队或防空。
+
+### kc_improvement
+
+`equipment?` `equipment_ids?` `assistant_ship?` `owned_ship_ids?` `weekday?` `date?` `all_days?` `include_costs?` `limit?`
+按东京时区查询每日改修装备、精确改修舰形态与消耗。快照由 `npm run fetch:improvements` 更新；默认响应有限条数，需要按玩家库存过滤时传入 ID 列表。
 
 ### kc_data_status
 无参数。version / commit / era / counts / capabilities / provenance / warnings。provenance 将转换的来源键映射为固定提交 URL。

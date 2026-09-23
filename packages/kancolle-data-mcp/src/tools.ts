@@ -16,14 +16,17 @@ import {
 import { parseRef } from "@kancolle-agent/shared";
 import type { LoadedDataset } from "./data-loader.js";
 import type { MemoryIndex } from "./index-memory.js";
+import type { ImprovementDataset } from "./improvement-data.js";
 import { remodelChain, searchAll } from "./index-memory.js";
 import { canShipEquip, whoCanEquip } from "./rules/equipment.js";
 import { calculateAirPowerSlot } from "./rules/air-power.js";
 import { loadMapGuide } from "./map-guide.js";
+export { kcImprovement } from "./improvement-tools.js";
 
 export interface ToolContext {
   ds: LoadedDataset;
   index: MemoryIndex;
+  improvements?: ImprovementDataset | null;
 }
 
 function resolveQuest(index: MemoryIndex, input: string): MasterQuest | null {

@@ -6,7 +6,7 @@ import { loadDataset } from "../src/data-loader.js";
 import { buildIndex } from "../src/index-memory.js";
 import { fileURLToPath } from "node:url";
 
-it("exposes item schema and remodel scope over the MCP protocol", async () => {
+it("exposes item schema, remodel scope, and improvements over MCP", async () => {
   const ds = loadDataset(fileURLToPath(new URL("../data/official/dataset.json", import.meta.url)));
   const server = createServer({ ds, index: buildIndex(ds) });
   const client = new Client({ name: "remodel-contract-test", version: "1" });
@@ -15,7 +15,8 @@ it("exposes item schema and remodel scope over the MCP protocol", async () => {
     await server.connect(serverTransport);
     await client.connect(clientTransport);
     const tools = await client.listTools();
-    expect(tools.tools).toHaveLength(10);
+    expect(tools.tools).toHaveLength(11);
+    expect(tools.tools.some(tool => tool.name === "kc_improvement")).toBe(true);
     expect(tools.tools.some(tool => tool.name === "kc_map_guide")).toBe(true);
     expect(tools.tools.some(tool => tool.name === "kc_quest_progress")).toBe(true);
     const call = async (name: string, args: Record<string, unknown>) => {

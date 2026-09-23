@@ -4,12 +4,14 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { pathToFileURL } from "node:url";
 import { z } from "zod";
 import { loadDataset } from "./data-loader.js";
+import { loadImprovementData } from "./improvement-data.js";
 import { buildIndex } from "./index-memory.js";
 import {
   kcDataStatus,
   kcAirPower,
   kcMapGuide,
   kcEquipmentRules,
+  kcImprovement,
   kcGet,
   kcQuestGraph,
   kcQuestProgress,
@@ -125,6 +127,23 @@ function createServer(ctx: ToolContext): McpServer {
   );
 
   server.tool(
+    "kc_improvement",
+    "Query daily equipment improvement schedules, exact assistant ship forms, and costs. Dates use Tokyo time.",
+    {
+      equipment: z.string().optional().describe("Exact equipment name, ID, or equipment:N ref"),
+      equipment_ids: z.array(z.number().int().positive()).max(300).optional(),
+      assistant_ship: z.string().optional().describe("Exact remodel form, such as ship:149"),
+      owned_ship_ids: z.array(z.number().int().positive()).max(1000).optional(),
+      weekday: z.number().int().min(0).max(6).optional().describe("Tokyo weekday: 0=Sun ... 6=Sat"),
+      date: z.string().regex(/^\\d{4}-\\d{2}-\\d{2}$/).optional().describe("Valid calendar date in Asia/Tokyo"),
+      all_days: z.boolean().optional(),
+      include_costs: z.boolean().optional(),
+      limit: z.number().int().min(1).max(200).optional(),
+    },
+    async (args) => toText(kcImprovement(ctx, args)),
+  );
+
+  server.tool(
     "kc_air_power",
     "Calculate pre-loss main-fleet air power from exact equipment, slot size, improvement, and proficiency. Returns a range when internal proficiency is unknown; does not model land bases or route losses.",
     {
@@ -153,12 +172,13 @@ function createServer(ctx: ToolContext): McpServer {
 export async function main(): Promise<void> {
   const ds = loadDataset();
   const index = buildIndex(ds);
-  const ctx: ToolContext = { ds, index };
+  const improvements = loadImprovementData();
+  const ctx: ToolContext = { ds, index, improvements };
   const server = createServer(ctx);
   const transport = new StdioServerTransport();
   await server.connect(transport);
   console.error(
-    `kancolle-data-mcp ready: ships=${ds.counts.ships} equipment=${ds.counts.equipment} quests=${ds.counts.quests}`,
+    `kancolle-data-mcp ready: ships=${ds.counts.ships} equipment=${ds.counts.equipment} quests=${ds.counts.quests} improvements=${improvements?.records.length ?? 0}`,
   );
 }
 

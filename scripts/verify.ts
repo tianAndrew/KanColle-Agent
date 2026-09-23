@@ -9,7 +9,14 @@ const root = process.cwd();
 
 function run(cmd: string) {
   console.log(`\n$ ${cmd}`);
-  execSync(cmd, { stdio: "inherit", cwd: root, shell: process.platform === "win32" ? "powershell.exe" : "/bin/sh" });
+  // Calling npm.ps1 from PowerShell fails on machines with the default
+  // execution policy. npm.cmd is the portable Windows entry point.
+  const executable = process.platform === "win32" ? "npm.cmd" : "npm";
+  execSync(`${executable} ${cmd}`, {
+    stdio: "inherit",
+    cwd: root,
+    shell: process.platform === "win32" ? "cmd.exe" : "/bin/sh",
+  });
 }
 
 const tools = [
@@ -28,9 +35,11 @@ const tools = [
   "kc_get",
   "kc_query",
   "kc_quest_graph",
+  "kc_quest_progress",
   "kc_ship_remodel",
   "kc_equipment_rules",
   "kc_air_power",
+  "kc_improvement",
   "kc_map_guide",
   "kc_data_status",
 ];
@@ -44,11 +53,14 @@ const files = [
   "packages/shared/src/types.ts",
   "packages/kancolle-data-mcp/src/index.ts",
   "packages/kancolle-data-mcp/src/tools.ts",
+  "packages/kancolle-data-mcp/src/improvement-tools.ts",
+  "packages/kancolle-data-mcp/src/improvement-data.ts",
   "packages/poi-plugin-mcp/src/plugin.ts",
   "packages/poi-plugin-mcp/src/tools.ts",
-  ".opencode/agents/kancolle.md",
-  ".opencode/agents/kcwiki-researcher.md",
+  ".agents/skills/kancolle-main/SKILL.md",
+  ".agents/skills/progression-planner/SKILL.md",
   "opencode.jsonc",
+  "docs/MCP_TOOLS.md",
   "config/kancolle.json",
 ];
 for (const f of files) {
@@ -60,7 +72,9 @@ for (const f of files) {
 console.log(`STRUCT OK: ${files.length} key files present`);
 console.log(`TOOL CONTRACT: ${tools.length} MCP tools defined in design`);
 
-run("npm run build");
-run("npm test");
+run("run build");
+run("run typecheck");
+run("test");
+run("run check:tool-docs");
 
 console.log("\nVERIFY PASS");

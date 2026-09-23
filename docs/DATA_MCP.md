@@ -24,7 +24,7 @@ Normalized Service
    Data Adapter → fixtures / kancolle-data
 ```
 
-## Tools（9）
+## Tools（11）
 
 | Tool | 说明 |
 |------|------|
@@ -36,7 +36,10 @@ Normalized Service
 | `kc_equipment_rules` | 舰种能否装备 / 谁能装备 |
 | `kc_map_guide` | 按稳定模块键读取常规海域攻略；空选择只返回目录 |
 | `kc_air_power` | 按装备、搭载、改修与熟练度计算出击前舰队制空值；内部熟练度未知时返回范围 |
+| `kc_improvement` | 查询每日改修装备、精确助手舰形态与改修消耗；按东京日期 |
 | `kc_data_status` | 数据集版本与能力 |
+
+改修日程从 WhoCallsTheFleet 的静态网页生成快照，默认运行时不联网。更新使用 `npm run fetch:improvements`；导入器校验来源结构与必填成本字段后才替换快照。
 
 ## 数据源
 
