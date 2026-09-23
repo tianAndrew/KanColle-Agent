@@ -30,9 +30,6 @@ class KanColleMcpPanel extends React.Component {
       port: 39271,
       snapshotVersion: null,
       playerLoggedIn: false,
-      shipCount: null,
-      equipCount: null,
-      resources: null,
       error: null,
     }
     this.timer = null
@@ -63,9 +60,6 @@ class KanColleMcpPanel extends React.Component {
         error: null,
         snapshotVersion: data.snapshot_version ?? null,
         playerLoggedIn: Boolean(data.player_logged_in),
-        shipCount: data.ships ?? null,
-        equipCount: data.equipment ?? null,
-        resources: data.resources ?? null,
       })
     } catch (e) {
       this.setState({
@@ -76,7 +70,7 @@ class KanColleMcpPanel extends React.Component {
   }
 
   render() {
-    const { online, port, snapshotVersion, playerLoggedIn, shipCount, equipCount, resources, error } =
+    const { online, port, snapshotVersion, playerLoggedIn, error } =
       this.state
     const row = (k, v) =>
       React.createElement(
@@ -99,42 +93,19 @@ class KanColleMcpPanel extends React.Component {
       React.createElement(
         'p',
         { style: { opacity: 0.8, marginBottom: 12 } },
-        '只读玩家 Snapshot，供 KanColle Agent / OpenCode 调用。无自动操作。',
+        '只读玩家 Snapshot，供 KanColle Agent / Codex / OpenCode 调用。无自动操作。',
       ),
       row('服务状态', online ? '在线' : '离线'),
       row('端点', `http://127.0.0.1:${port}/mcp`),
       row('健康检查', `http://127.0.0.1:${port}/health`),
       row('Token', maskToken(readToken())),
       row('玩家登录', playerLoggedIn ? '是' : '否 / 未进母港'),
-      row('舰娘数', shipCount == null ? '—' : String(shipCount)),
-      row('装备数', equipCount == null ? '—' : String(equipCount)),
-      row(
-        '四资 油/弹/钢/铝',
-        resources
-          ? `${resources.fuel}/${resources.ammo}/${resources.steel}/${resources.bauxite}`
-          : '未加载',
-      ),
-      row(
-        '高速建造 / 桶',
-        resources
-          ? `${resources.instant_construction} / ${resources.bucket}`
-          : '未加载',
-      ),
-      row(
-        '开发 / 改修',
-        resources
-          ? `${resources.development_material} / ${resources.improvement_material}`
-          : '未加载',
-      ),
-      resources && resources._raw
-        ? row('原始[0..7]', resources._raw.join(','))
-        : null,
       row('Snapshot 版本', snapshotVersion == null ? '—' : String(snapshotVersion)),
       error ? row('错误', error) : null,
       React.createElement(
         'p',
         { style: { marginTop: 16, opacity: 0.7, fontSize: 12 } },
-        '服务在线但玩家未登录时，舰娘/装备可能为 0——这不等于 MCP 故障。登录母港后自动同步。',
+        '服务在线但玩家未登录时，玩家数据尚未就绪；登录母港后自动同步。',
       ),
       React.createElement(
         'button',

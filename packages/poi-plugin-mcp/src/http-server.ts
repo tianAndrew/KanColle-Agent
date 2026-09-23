@@ -1,4 +1,5 @@
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
+import type { AddressInfo } from "node:net";
 import { isAuthorized } from "./auth.js";
 import { createPoiMcpServer } from "./mcp-server.js";
 import type { SnapshotStore } from "./snapshot.js";
@@ -65,14 +66,6 @@ export async function startPoiHttpServer(
           online: true,
           player_logged_in: snap.player_logged_in,
           snapshot_version: snap.version,
-          ships: snap.ships.length,
-          equipment: snap.equipment.length,
-          resources: snap.resources,
-          resources_coverage: snap.resources
-            ? "complete"
-            : snap.inventory.materials_coverage,
-          materials_coverage: snap.inventory.materials_coverage,
-          useitems_coverage: snap.inventory.useitems_coverage,
           generated_at: snap.generated_at,
         });
         return;
@@ -129,10 +122,13 @@ export async function startPoiHttpServer(
     http.listen(port, host, () => resolve());
   });
 
-  console.log(`[poi-plugin-kancolle-mcp] listening http://${host}:${port}/mcp (health: /health)`);
+  const address = http.address();
+  const listeningPort = typeof address === "object" && address ? (address as AddressInfo).port : port;
+
+  console.log(`[poi-plugin-kancolle-mcp] listening http://${host}:${listeningPort}/mcp (health: /health)`);
 
   return {
-    port,
+    port: listeningPort,
     close: () =>
       new Promise<void>((resolve) => {
         http.close(() => resolve());

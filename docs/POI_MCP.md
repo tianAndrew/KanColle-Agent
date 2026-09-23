@@ -14,7 +14,7 @@
 Poi Redux / KCSAPI Events
        │
        ▼
-  ReduxAdapter / ApiEventAdapter
+  Poi Store Bridge / ApiEventAdapter
        │
        ▼
      Normalizer
@@ -42,7 +42,7 @@ Poi Redux / KCSAPI Events
 
 ## Token
 
-首次启动生成 `packages/poi-plugin-mcp/token.json`（勿提交）。环境变量：
+首次启动在插件目录生成 `token.json`（勿提交）。MCP 客户端使用的 `KANCOLLE_POI_MCP_TOKEN` 必须与此 token 一致：
 
 ```
 KANCOLLE_POI_MCP_TOKEN=<token>
@@ -62,3 +62,5 @@ npm run start -w poi-plugin-kancolle-mcp
 - 只读，禁止自动出击/装备/远征/改修
 - 不打印 Cookie / API Token / 完整认证请求
 - Token 仅用于 MCP，禁止复用游戏会话
+- HTTP 服务只绑定 `127.0.0.1`；不要改为公网监听或把 token 放进仓库配置
+- `/health` 为 Poi 插件面板提供最小存活状态，不需要 MCP token；玩家库存只能经鉴权 MCP 工具读取
